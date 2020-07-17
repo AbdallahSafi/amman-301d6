@@ -165,21 +165,26 @@ console.log(Student.courseName());
 // STEP 11
 // How do arrow functions affect constructor functions?
 Student.prototype.scope = function () {
-  console.log(this);
+  console.log('test', this);
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// Student object
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// Global object
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// It happens because arrow functions retain the this value of the enclosing functional scope.
+// Arrow functions do not have 'this' arguments or other special names bound at all.
+
+
+
+
